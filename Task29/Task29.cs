@@ -4,20 +4,18 @@
 
 // 6, 1, 33 -> [6, 1, 33]
 
-Random rand = new Random();
 
-int [] numbers = new int[8];
-Console.Write("");
+int [] numbers = new int[50];
+Console.Write("[");
 
-int[] array = new int[8];
+for (int i = 0; i < numbers.Length; i++)
+ {
+    numbers [i] = new Random().Next(0, 50);
+    Console.Write(" " + Method (i) + " ");
+ }
+Console.Write("]");
 
-for (int i = 0; i <= 7; i++)
+int Method (int a)
 {
-    int num = rand.Next(0,11);
-    array[i] = num;
-}
-
-foreach( var i in array)
-{
-    Console.Write(i+ " ");
+    return numbers[a];
 }
