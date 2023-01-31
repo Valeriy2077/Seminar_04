@@ -4,5 +4,22 @@
 
 // 2, 4 -> 16
 
-System.Console.WriteLine("Введите A и B");
+int Vstepen(int numA, int numB)
+{
+  int result = 1;
+  for(int i=1; i <= numB; i++){
+    result = result * numA;
+  }
+    // int result = Math.Pow(numberA, numberB);
+    return result;
+}
+
+  Console.Write("Введите число A: ");
+  int numA = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Введите число B: ");
+  int numB = Convert.ToInt32(Console.ReadLine());
+
+  int vstepen = Vstepen(numA, numB);
+  Console.WriteLine("Ответ: " + vstepen);
+
 
